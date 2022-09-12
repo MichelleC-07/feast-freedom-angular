@@ -1,1 +1,37 @@
 <p>kitchen works!</p>
+
+<div class="container-fluid">
+  <br />
+  <h2>Register Kitchen</h2>
+  <mat-card>
+    <form #kitchenForm="ngForm">
+      <div class="form-group">
+        <label>Kitchen Name</label>
+        <input
+          type="text"
+          #kitchenName="ngModel"
+          required
+          minlength="3"
+          class="form-control"
+          name="kitchenName"
+          [(ngModel)]="kitModel.kitchen_name"
+          [class.is-invalid]="kitchenName.invalid && kitchenName.touched"
+        />
+        <div *ngIf="kitchenName.touched && kitchenName.errors">
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenName?.errors?.['required']"
+          >
+            Kitchen Name is required
+          </div>
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenName?.errors?.['minlength']"
+          >
+            Kitchen Name should be at least 3 characters
+          </div>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</div>
