@@ -1,0 +1,33 @@
+<div class="myModal">
+    <div class="myModal-content">
+    <div class="container w-75">
+        <h2>User Login</h2>
+    
+        <form class="form-group" #userForm="ngForm">
+            <div>
+                <label for="username">Username: </label>
+                <input class="form-control" 
+                        id="username" 
+                        name="username"
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.email">
+                       
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input class="form-control" 
+                        id="password" 
+                        name="password" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.password">
+            </div>
+            <br/>
+            <a routerLink="/new-user" class="btn btn-warning">New User</a> &nbsp;
+            <button (click)="submit()" class="btn btn-primary">Login</button>
+        </form>
+        
+    </div>
+    </div>
+    </div>

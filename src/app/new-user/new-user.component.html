@@ -1,0 +1,88 @@
+<div class="myModal">
+    <div class="myModal-content">
+    <div class="container w-75">
+        <h2>User Registration</h2>
+    
+        <form class="form-group" #userForm="ngForm">
+            <div>
+                <label for="firstname">First Name: </label>
+                <input class="form-control" 
+                        id="firstname" 
+                        name="firstname"
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.first_name">
+            </div>
+            <div>
+                <label for="lastname">Last Name: </label>
+                <input class="form-control" 
+                        id="lastname" 
+                        name="lastname" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.last_name">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input class="form-control" 
+                        id="email" 
+                        name="email" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.email">
+            </div>
+            <div>
+                <label for="password">Last Name: </label>
+                <input class="form-control" 
+                        id="password"
+                        name="password" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.password">
+            </div>
+            <div>
+                <label for="question1">Provide Security Question 1: </label>
+                <input class="form-control" 
+                        id="question1"
+                        name="question1" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.security_q_1">
+            </div>
+            <div>
+                <label for="answer1">Provide Answer 1: </label>
+                <input class="form-control" 
+                        id="answer1"
+                        name="answer1" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.sq_1_ans">
+            </div>
+            <div>
+                <label for="question2">Provide Security Question 2: </label>
+                <input class="form-control" 
+                        id="question2"
+                        name="question2" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.security_q_2">
+            </div>
+            <div>
+                <label for="answer2">Provide Answer 2: </label>
+                <input class="form-control" 
+                        id="answer2"
+                        name="answer2" 
+                        required
+                        min="1"
+                        [(ngModel)]="userModel.sq_2_ans">
+            </div>
+            
+            <br/>
+            <a routerLink="/user-register" routerLinkActive="active" class="btn btn-danger">Cancel</a> &nbsp;
+            <button (click)="submit()" class="btn btn-success">Submit</button>
+        </form>
+        
+    </div>
+    </div>
+    </div>
+

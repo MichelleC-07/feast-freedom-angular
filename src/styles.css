@@ -2,3 +2,22 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.myModal {
+    position:fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0,0,0,0.3);
+}
+
+.myModal-content {
+    background: white;
+    border: 1px solid #888;
+    width: 40%;
+    margin-left:auto;
+    margin-right:auto;
+    /* margin: 15% auto; */
+    padding: 1rem;
+}

@@ -14,9 +14,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { KitchenService } from './services/kitchen.service';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
+import { NewUserComponent } from './new-user/new-user.component';
+
 
 @NgModule({
-  declarations: [AppComponent, KitchenregisterComponent],
+  declarations: [
+    AppComponent, 
+    KitchenregisterComponent, 
+    WelcomeComponent, 
+    UserRegisterComponent, 
+    NewUserComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
