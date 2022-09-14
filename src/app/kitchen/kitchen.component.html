@@ -1,1 +1,36 @@
-<p>kitchen works!</p>
+<div class="container">
+  <h2>Kitchen Listing</h2>
+  <div>
+    <table
+      *ngIf="kitchenService.kitchenData.length != 0; else noTable"
+      class="table table-bordered"
+    >
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Kitchen Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let kitchen of kitchenService.kitchenData">
+          <!-- <td (click) = "selectemployee(employee)">{{ employee.id }}</td> -->
+          <td (click)="viewKitchen(kitchen.id)">{{ kitchen.id }}</td>
+          <td>{{ kitchen.kitchen_name }}</td>
+          <!-- <td>
+            <button class="btn btn-primary me-2" (click)="onSelect(employee)">
+              View
+            </button>
+          </td> -->
+
+          <!-- <button (click) = "viewEmployee(employee.id)">View</button>
+                        &nbsp; -->
+          <!-- <button (click) = "updateEmployee(employee)">Edit</button>
+                        &nbsp; -->
+          <!-- <button mat-raised-button color="primary" (click) = "deleteeEmployee(employee.id)">Delete</button>
+                        &nbsp; -->
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noTable> RESULT NOT FOUND! </ng-template>
+  </div>
+</div>

@@ -50,4 +50,15 @@ export class KitchenService {
   errorHandler(error: HttpErrorResponse) {
     return throwError(error.message || 'Server Errorrrrr');
   }
+
+  viewRow(kitchen: IKitchen) {
+    alert(`
+    Id: ${kitchen.id},
+    Name: ${kitchen.kitchen_name},
+    Email: ${kitchen.kitchen_email},
+    Work Days: ${kitchen.work_days},
+    Opening Time: ${kitchen.work_start_time},
+    Closing Time: ${kitchen.work_end_time}
+    `);
+  }
 }
