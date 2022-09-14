@@ -1,12 +1,11 @@
-<h2>kitchen works!</h2>
-
 <div class="container-fluid">
   <br />
   <h2>Register Kitchen</h2>
   <mat-card>
     <form #kitchenForm="ngForm">
+      <!--Kitchen Name-->
       <div class="form-group">
-        <label>Kitchen Name</label>
+        <label>Name</label>
         <input
           type="text"
           #kitchenName="ngModel"
@@ -22,13 +21,101 @@
             class="alert alert-danger"
             *ngIf="kitchenName?.errors?.['required']"
           >
-            Kitchen Name is required
+            name is required
           </div>
           <div
             class="alert alert-danger"
             *ngIf="kitchenName?.errors?.['minlength']"
           >
-            Kitchen Name should be at least 3 characters
+            name should be at least 3 characters
+          </div>
+        </div>
+      </div>
+      <!--Kitchen email-->
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="text"
+          #kitchenEmail="ngModel"
+          required
+          minlength="3"
+          class="form-control"
+          name="kitchenEmail"
+          [(ngModel)]="kitModel.kitchen_email"
+          [class.is-invalid]="kitchenEmail.invalid && kitchenEmail.touched"
+        />
+        <div *ngIf="kitchenEmail.touched && kitchenEmail.errors">
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenEmail?.errors?.['required']"
+          >
+            email is required
+          </div>
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenEmail?.errors?.['minlength']"
+          >
+            email should be at least 3 characters
+          </div>
+        </div>
+      </div>
+      <!--Password-->
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          #kitchenPassword="ngModel"
+          required
+          minlength="6"
+          class="form-control"
+          name="kitchenPassword"
+          [(ngModel)]="kitModel.kitchen_password"
+          [class.is-invalid]="
+            kitchenPassword.invalid && kitchenPassword.touched
+          "
+        />
+        <div *ngIf="kitchenPassword.touched && kitchenPassword.errors">
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenPassword?.errors?.['required']"
+          >
+            password is required
+          </div>
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenPassword?.errors?.['minlength']"
+          >
+            password should be at least 6 characters
+          </div>
+        </div>
+      </div>
+      <!--Confirm Password-->
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          #kitchenPassword="ngModel"
+          required
+          minlength="6"
+          class="form-control"
+          name="kitchenPassword"
+          [(ngModel)]="kitModel.kitchen_password"
+          [class.is-invalid]="
+            kitchenPassword.invalid && kitchenPassword.touched
+          "
+        />
+        <div *ngIf="kitchenPassword.touched && kitchenPassword.errors">
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenPassword?.errors?.['required']"
+          >
+            password is required
+          </div>
+          <div
+            class="alert alert-danger"
+            *ngIf="kitchenPassword?.errors?.['minlength']"
+          >
+            password should be at least 6 characters
           </div>
         </div>
       </div>
