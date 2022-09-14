@@ -18,14 +18,13 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { NewUserComponent } from './new-user/new-user.component';
 
-
 @NgModule({
   declarations: [
-    AppComponent, 
-    KitchenregisterComponent, 
-    WelcomeComponent, 
-    UserRegisterComponent, 
-    NewUserComponent
+    AppComponent,
+    KitchenregisterComponent,
+    WelcomeComponent,
+    UserRegisterComponent,
+    NewUserComponent,
   ],
   imports: [
     BrowserModule,
